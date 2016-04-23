@@ -42,16 +42,22 @@
 		color: white;
 	}
 	.mdl-textfield {
-		width: 800px;
+		width: auto;
+		border: 1px solid #ededee;
+		padding-left: 10px;
+		padding-right: 10px;
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
 	}
 	.mdl-textfield__input {
-		height: 400px;
+		height: 100px;
 		background-color: white;
 		color: black;
 		background: rgba(255, 255, 255, 0.5);
+	}
+	.mdl-textfield__label {
+		padding-left: 12px;
 	}
 	.mdl-button {
 		display: block;
@@ -64,38 +70,59 @@
 		margin-right: auto;
 		margin-left: auto;
 	}
+	.demo-card-wide.mdl-card {
+	  	width: auto;
+	  	background-color: white;
+	}
+	.demo-card-wide > .mdl-card__title {
+		  color: #fff;
+		  height: 176px;
+		  background: url('https://newevolutiondesigns.com/images/freebies/black-white-background-3.jpg') center / cover;
+	}
+	.demo-card-wide > .mdl-card__menu {
+	  	color: #fff;
+	}
+	.mdl-card__title-text {
+		color: white;
+	}
+	.mdl-card__supporting-text {
+		text-align: justify;
+		color: #272b30;
+	}
+	body {
+	  padding: 20px;
+	  background: #fafafa;
+	  position: relative;
+	}
 	</style>
-
-	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-	  	<header class="mdl-layout__header mdl-layout__header--transparent">
-	  	</header>
-	  	<div class="mdl-layout__drawer">
-	    	<span class="mdl-layout-title">Title</span>
-		    <nav class="mdl-navigation">
-		    	<p style="text-align: justify; padding-left: 20px; padding-right: 20px">I believe there should be something here also...</p>
-		    </nav>
-	  	</div>
-	  	<div class="main">
-		  	<div class="text">
-		  		<h1>SPECIFIC</h1>
-		  		<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel nisi eu elit efficitur ultricies sollicitudin sit amet magna. Cras placerat, lacus ut tincidunt laoreet, mauris lorem venenatis justo, vel vestibulum odio nunc ut odio. Nam scelerisque mi ipsum. Cras id finibus orci, eget dignissim elit. Nunc et neque nibh. Ut sit amet facilisis lacus, eget tincidunt velit. Maecenas varius ultrices leo in mollis. Donec convallis volutpat velit, vel dapibus dolor maximus ac. Nunc nisl leo, mollis at hendrerit eu, rhoncus ac sem. Morbi lacinia ipsum ac euismod commodo. Proin viverra massa eros, porttitor porta mauris facilisis congue. Morbi aliquet rhoncus est.</p>
-		  	</div>
-		  	<form action="#">
-	  			<div class="mdl-textfield mdl-js-textfield">
-	    			<textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5"></textarea>
-	    			<label class="mdl-textfield__label" for="sample5">Text lines...</label>
-	  			</div>
-			</form>
-			<form action="measurable.html">
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-				  Check
-				</button>
-			</form>
+	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+	  	<div class="mdl-card__title">
+	    	<h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: auto;%">SPECIFIC</h1>
+	 	</div>
+	  	<div class="mdl-card__supporting-text">
+		    <p>A goal must be specific. This means that your goal cannot be a broad one, such as: "I want to become a better person" or "I want to get rich". The goal must be clear, such as: "I want to lose 10 kilosgrams", "I want to become a jetplane pilot" or "I want to learn dancing salsa".</br>
+		    </br>
+		    Write here your Specific goal:</p>
 		</div>
-	  	<main class="mdl-layout__content">
-  		</main>
+		<form action="#">
+  			<div class="mdl-textfield mdl-js-textfield">
+    			<textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5"></textarea>
+    			<label class="mdl-textfield__label" for="sample5">Type here...</label>
+  			</div>
+		</form>
+		<div class="mdl-card__actions mdl-card--border">
+	    	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="measurable.html">
+	      	Check
+	    	</a>
+		</div>
+		<div class="mdl-card__menu">
+		    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+		      	<i class="material-icons">share</i>
+		    </button>
+	  	</div>
 	</div>
-	</div>
+  	<main class="mdl-layout__content">
+		</main>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
