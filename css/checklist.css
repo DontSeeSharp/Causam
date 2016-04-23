@@ -72,4 +72,15 @@
 .left-padding {
 padding-left: 20px
 }
+  .menu-buttons {
+	  padding: 0;
+	  margin: 1px;
+	  height: 100%;
+	  width: 475px;
+  }
+  
+  #test {
+	  padding: 0;
+	  margin: 0;
+  }
 </style>
