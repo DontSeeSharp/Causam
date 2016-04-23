@@ -115,3 +115,14 @@
 .ui-datepicker-buttonpane .ui-datepicker-current:hover {
   background: #b4cbe5;
 }
+.full button span {
+  background-color: limegreen;
+  border-radius: 32px;
+  color: black;
+}
+.partially button span {
+  background-color: orange;
+  border-radius: 32px;
+  color: black;
+}
+
