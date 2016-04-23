@@ -1,0 +1,72 @@
+<style>
+  .demo-layout-transparent {
+    background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+    height: 75px;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+    your background is light. */
+    color: white;
+  }
+  .welcomeText {
+    margin-top: 40px;
+    color: white;
+    background-color: black;
+    background: rgba(0,0,0,.5);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  td {
+    color: black;
+  }
+  .padding {
+    padding-bottom: 5px;
+  }
+  .demo-card-wide.mdl-card {
+    width: auto;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 75px;
+    background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+  body {
+    padding: 10px;
+    background: #fafafa;
+    position: relative;
+  }
+  .read-more-state {
+    display: none;
+  }
+
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+
+  .read-more-state ~ .read-more-trigger:before {
+    content: 'Show more';
+  }
+
+  .read-more-state:checked ~ .read-more-trigger:before {
+    content: 'Show less';
+  }
+
+  .read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    font-size: .7em;
+  }
+</style>

@@ -26,9 +26,11 @@
   </head>
   <body>
    <!-- Uses a transparent header that draws on top of the layout's background -->
+   <!--http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg-->
+   <!--http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg-->
    <style>
     .demo-layout-transparent {
-      background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg') center / cover;
+      background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
     }
     .demo-layout-transparent .mdl-layout__header,
     .demo-layout-transparent .mdl-layout__drawer-button {
@@ -45,35 +47,53 @@
       padding-top: 50px;
       padding-bottom: 50px;
     }
+    td {
+      color: black;
+    }
+    .padding {
+      padding-bottom: 5px;
+    }
+
+      .demo-card-wide.mdl-card {
+        width: auto;
+      }
+      .demo-card-wide > .mdl-card__title {
+        color: #fff;
+        height: 200px;
+        background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ),url('http://vacationio.com/wp-content/uploads/2015/11/Rome-Colosseum.jpg') center / cover;
+      }
+      .demo-card-wide > .mdl-card__menu {
+        color: #fff;
+      }
+      body {
+      padding: 20px;
+      background: #fafafa;
+      position: relative;
+    }
     </style>
 
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <!--<span class="mdl-layout-title">Title</span>-->
-      </header>
-          <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Settings</span>
-            <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="">Logged in as Ragnar</a>
-            </nav>
-          </div>
-          <main class="mdl-layout__content">
-          <div class="welcomeText">
-            <h2>Almost finished!</h2>
-            <p>As we all know, Rome was not built in a day. The same thing can be said about your goal.In order to succeed with your big goal,
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h1 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">Almost finished!</h1>
+      </div>
+      <div class="mdl-card__supporting-text">
+        As we all know, Rome was not built in a day. The same thing can be said about your goal.In order to succeed with your big goal,
             you need to break it down to checkpoints so it's easier to keep track of your progress. Let me help you create these.
-            <!-- Raised button with ripple -->
-            <form action="menu.html">
-<!-- Raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-  Button
-</button>
-            </form>
-          </div>
-          </main>
-        </div>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="align: center" href="checklist.html">
+          NEXT
+        </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
+          <li class="mdl-menu__item">Logged in as Ragnar luga</li>
+          <li class="mdl-menu__item">Settings</li>
+          <li class="mdl-menu__item">Log out</li>
+        </ul>
+      </div>
     </div>
 
 
@@ -86,3 +106,4 @@
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
   </body>
 </html>
+
