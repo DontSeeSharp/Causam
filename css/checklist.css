@@ -69,4 +69,7 @@
     display: inline-block;
     font-size: .7em;
   }
+.left-padding {
+padding-left: 20px
+}
 </style>
