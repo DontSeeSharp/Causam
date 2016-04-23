@@ -22,7 +22,7 @@ app.config(['$routeProvider', function($routeProvider) {
   .when('/conclusion', {templateUrl: 'conclusion.html'})
   .when('/rome', {templateUrl: 'rome.html'})
   .when('/checklist', {templateUrl: 'checklist.html'})
-  .when('/end1', {templateUrl: 'endl.html'})
+  .when('/end1', {templateUrl: 'end1.html'})
   .otherwise({redirectTo: '/greeting'})
 
   console.log('asdasd')
