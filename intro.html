@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -16,6 +17,8 @@
     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <link rel ="stylesheet" href="causam/css/checklist.css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,46 +27,123 @@
     <![endif]-->
   </head>
   <body>
-  <style>
-  .mdl-card__supporting-text {
-    color: black;
-    margin-right: auto; 
-    margin-left: auto;
-  }
-.demo-card-wide.mdl-card {
-  color: black;
-  width: auto;
-}
-.demo-card-wide > .mdl-card__title {
-  color: black;
-  height: 176px;
-  background: url('http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg') center / cover;
-}
-a {align: left;}
-</style>
+   <!-- Uses a transparent header that draws on top of the layout's background -->
+   <!--http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg-->
+   <!--http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg-->
+   <style>
+    .demo-layout-transparent {
+      background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+      height: 75px;
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+      your background is light. */
+      color: white;
+    }
+    .welcomeText {
+      margin-top: 40px;
+      color: white;
+      background-color: black;
+      background: rgba(0,0,0,.5);
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    td {
+      color: black;
+    }
+    .padding {
+      padding-bottom: 5px;
+    }
+    .demo-card-wide.mdl-card {
+      width: auto;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 75px;
+      background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    body {
+      padding: 10px;
+      background: #fafafa;
+      position: relative;
+    }
+    .read-more-state {
+      display: none;
+    }
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: 15%">WELCOME</h1>
-  </div>
-  <div class="mdl-card__supporting-text" style="text-align: justify;">
- People with goals tend to out-perform those without goals. The goals you set and your beliefs about these goals guide your behaviours and make it purposeful. Goals should be challenging but not seem unreachable.
+    .read-more-target {
+      opacity: 0;
+      max-height: 0;
+      font-size: 0;
+      transition: .25s ease;
+    }
+
+    .read-more-state:checked ~ .read-more-wrap .read-more-target {
+      opacity: 1;
+      font-size: inherit;
+      max-height: 999em;
+    }
+
+    .read-more-state ~ .read-more-trigger:before {
+      content: 'Show more';
+    }
+
+    .read-more-state:checked ~ .read-more-trigger:before {
+      content: 'Show less';
+    }
+
+    .read-more-trigger {
+      cursor: pointer;
+      display: inline-block;
+      font-size: .7em;
+    }
+
+  </style>
+
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h3 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">WELCOME</h3>
+        
+      </div>
+      <div class="mdl-card__supporting-text">
+        <input type="checkbox" class="read-more-state" id="post-1" />
+
+        <p class="read-more-wrap">People with goals tend to out-perform those without goals. <span class="read-more-target">The goals you set and your beliefs about these goals guide your behaviours and make it purposeful. Goals should be challenging but not seem unreachable.
   This way you get the most out from completing your goals.
-  <br>
-  <br>
-  <i>A survey about goals was carried out in the Estonian Business School where students were asked about their current goals and objectives. 83% of participants hadn't set any goals. 16% of students had some goals and only 1% of the students had certain goals and objectives planned out.<br> The same survey was carried out again 10 years later and the same participants were queried about their monthly wages. The same 86% mostly earned and anverage wage. The 16% earned 3 times the average wage. The 1% earned 10 times the wages of other groups combined. See how planning goals may have a great impact on you life?</i> 
-  <br>
-  <br>
-  Let me help you set up a S.M.A.R.T goal in 5 easy steps.
-  </div>
-  <div class="mdl-card__actions mdl-card--border" >
-   <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="specific.html" style="align: left">
-      Next
-    </a>
-  </div>
-  
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+  <i>A survey about goals was carried out in Harvard University where students were asked about their current goals and objectives. 84% of participants hadn't set any goals. 13% of students had some goals and only 3% of the students had certain goals and objectives planned out. The same survey was carried out again 10 years later and the same participants were queried about their monthly wages. The same 84% mostly earned and anverage wage. The 13% earned two times the average wage. The 3% earned 10 times the wages of other groups combined. See how planning goals may have a great impact on you life?</i> 
+  </span></p>
+        <label for="post-1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  read-more-trigger"></label>
+      </div>
+     <p class="left-padding"> Let me help you set up a S.M.A.R.T goal in 5 easy steps. </p>
+      <div style="padding-top: 10px;padding-bottom: 10px">
+        
+      <form action="specific.html" style="text-align: center; padding-bottom: 10px">
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+          Next
+        </button>
+      </form>
+      
+      <div class="mdl-card__menu">
+        <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
+          <li class="mdl-menu__item">Logged in as Ragnar luga</li>
+          <li class="mdl-menu__item">Settings</li>
+          <li class="mdl-menu__item">Log out</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -71,3 +151,4 @@ a {align: left;}
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
   </body>
 </html>
+
