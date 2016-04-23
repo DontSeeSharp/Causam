@@ -31,6 +31,7 @@
    <style>
     .demo-layout-transparent {
       background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+      height: 75px;
     }
     .demo-layout-transparent .mdl-layout__header,
     .demo-layout-transparent .mdl-layout__drawer-button {
@@ -39,7 +40,6 @@
       color: white;
     }
     .welcomeText {
-      text-align: center;
       margin-top: 40px;
       color: white;
       background-color: black;
@@ -58,30 +58,18 @@
     }
     .demo-card-wide > .mdl-card__title {
       color: #fff;
-      height: 176px;
-      background: url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+      height: 75px;
+      background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
     }
     .demo-card-wide > .mdl-card__menu {
       color: #fff;
     }
-    </style>
-
-    
-
-    <!-- Wide card with share menu button -->
-    <style>
-      .demo-card-wide.mdl-card {
-        width: auto;
-      }
-      .demo-card-wide > .mdl-card__title {
-        color: #fff;
-        height: 200px;
-        background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
-      }
-      .demo-card-wide > .mdl-card__menu {
-        color: #fff;
-      }
-    </style>
+    body {
+      padding: 10px;
+      background: #fafafa;
+      position: relative;
+    }
+  </style>
 
 
     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
@@ -142,11 +130,13 @@
           </tbody>
         </table>
       </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="align: center" href="end1.html">
-          NEXT
-        </a>
-      </div>
+      <form action="end1.html" style="text-align: center; padding-bottom: 10px">
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+          Next
+        </button>
+      </form>
+      
       <div class="mdl-card__menu">
         <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
