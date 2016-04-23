@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<link type="text/css" rel="stylesheet" href="css\checklist.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,76 +33,36 @@
 	     your background is light. */
 	  color: white;
 	}
-	.main {
-		background: rgba(0, 0, 0, 0.5);
-		padding-bottom: 50px;
-		padding-top: 20px;
-	}
-	.text {
-		text-align: center;
-		color: white;
-	}
-	.mdl-textfield {
-		width: auto;
-		border: 1px solid #ededee;
-		padding-left: 10px;
-		padding-right: 10px;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-	}
-	.mdl-textfield__input {
-		height: 100px;
-		background-color: white;
-		color: black;
-		background: rgba(255, 255, 255, 0.5);
-	}
-	.mdl-textfield__label {
-		padding-left: 12px;
-	}
 	.mdl-button {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.description {
-		max-width: 800px;
-		text-align: justify;
-		margin-right: auto;
-		margin-left: auto;
+	.mdl-textfield {
+	  width: auto;
+	  border: 1px solid #ededee;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  display: block;
+	  margin-right: auto;
+	  margin-left: auto;
 	}
-	.demo-card-wide.mdl-card {
-	  	width: auto;
-	  	background-color: white;
+	.mdl-textfield__input {
+	  height: 100px;
+	  background-color: white;
+	  color: black;
+	  background: rgba(255, 255, 255, 0.5);
 	}
-	.demo-card-wide > .mdl-card__title {
-		  color: #fff;
-		  height: 176px;
-		  background: url('https://newevolutiondesigns.com/images/freebies/black-white-background-16.jpg') center / cover;
-	}
-	.demo-card-wide > .mdl-card__menu {
-	  	color: #fff;
-	}
-	.mdl-card__title-text {
-		color: white;
-	}
-	.mdl-card__supporting-text {
-		text-align: justify;
-		color: #272b30;
-		line-height: 170%;
-	}
-	body {
-	 	padding: 20px;
-	  	background: #fafafa;
-	  	position: relative;
+	.mdl-textfield__label {
+	  padding-left: 12px;
 	}
 	</style>
 	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 	  	<div class="mdl-card__title">
-	    	<h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: auto;">RELEVANT</h1>
+	    	<h1 class="subhead-2" style="margin-left: 10%; margin-right: auto; color: white;">RELEVANT</h1>
 	 	</div>
 	  	<div class="mdl-card__supporting-text">
-		    <p>A goal must be relevant.</br></br> A relevant goal is a goal that is important to you. What do you gain from this goal? Is it important to you? Goals that are relevant have purposes why they were set in the first place.</br>
+		    <p>A goal must be relevant.</br></br> A relevant goal is a goal that is important to you. What do you gain from this goal? Is this the right time to do it? Goals that are relevant have purposes why they were set in the first place.</br>
 		    </br>
 		    <h5>Write here why is this goal relevant to you:</h5></p>
 		</div>
@@ -117,10 +78,13 @@
 	    	</a>
 		</div>
 		<div class="mdl-card__menu">
-		    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-		      	<i class="material-icons">share</i>
-		    </button>
-	  	</div>
+        <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
+          <li class="mdl-menu__item">Logged in as Ragnar luga</li>
+          <li class="mdl-menu__item">Settings</li>
+          <li class="mdl-menu__item">Log out</li>
+        </ul>
+      </div>
 	</div>
   	<main class="mdl-layout__content">
 	</main>
