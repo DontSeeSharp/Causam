@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <style>
+	.demo-card-wide.mdl-card {
+	  width: 512px;
+	}
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 176px;
+	  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+	}
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+
+	body {
+	  padding: 20px;
+	  background: #fafafa;
+	  position: relative;
+	}
+	</style>
+    <!-- Wide card with share menu button -->
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: auto">GOALS</h1>
+      </div>
+      <div class="mdl-card__supporting-text" align="center">
+	  <ul class="mdl-list">
+	    <li>
+		<button id="current-goal" class="mdl-button">
+		<h3 style="color: black; margin-right: auto; margin-left: auto; margin-top:0">
+		BIG GOAL</h3>
+		</button>
+		<dialog class="mdl-dialog">
+		<div><h3 class="mdl-dialog__title" style="color: black; margin-right: auto; margin-left: auto">
+		BIG GOAL</h3></div>
+		<div class="mdl-dialog__content">
+		<p><ul class="mdl-list">
+		<li class="mdl-list__item">TODO</li>
+		</ul></p>
+		</div>
+		<div class="mdl_dialog__actions">
+		<button type="button" class="mdl-button redirect">DO-ABLES</button>
+		<button type="button" class="mdl-button close">CANCEL</button>
+		</div>
+		</dialog>
+		<script>
+		var dialog = document.querySelector('dialog');
+		var showDialogButton = document.querySelector('#current-goal');
+		if (!dialog.showModal) {
+			dialogPolyfill.registerDialog(dialog);
+		}
+		showDialogButton.addEventListener('click', function() {
+			dialog.showModal();
+		});
+		dialog.querySelector('.close').addEventListener('click', function() {
+			dialog.close();
+		});
+		dialog.querySelector('.redirect').addEventListener('click', function() {
+			dialog.close();
+			window.location.href = "./checklist.html";
+		});
+		</script>
+		</li>
+		<li>
+		<h3 style="color: black; margin-right: auto; margin-left: auto">
+		<strike>OLD BIG GOAL</strike>
+		</h3>
+		</li>
+	  </ul>
+    </div>
+	<div class="mdl-card__actions mdl-card--border">
+      </div>
+  </body>
+</html>
