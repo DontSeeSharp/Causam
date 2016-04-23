@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,60 +25,43 @@
     <![endif]-->
   </head>
   <body>
-   <!-- Uses a transparent header that draws on top of the layout's background -->
-   <style>
-    .demo-layout-transparent {
-      background: linear-gradient(  rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) ),url('http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg') center / cover;
-    }
-    .demo-layout-transparent .mdl-layout__header,
-    .demo-layout-transparent .mdl-layout__drawer-button {
-      /* This background is dark, so we set text to white. Use 87% black instead if
-      your background is light. */
-      color: white;
-    }
-    .welcomeText {
-      text-align: center;
-      margin-top: 40px;
-      color: white;
-      background-color: black;
-      background: rgba(0,0,0,.5);
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-    </style>
+  <style>
+  .mdl-card__supporting-text {
+    color: black;
+    margin-right: auto; 
+    margin-left: auto;
+    font-family: cursive;
+  }
+.demo-card-wide.mdl-card {
+  color: black;
+  width: auto;
+}
+.demo-card-wide > .mdl-card__title {
+  color: black;
+  height: 176px;
+  background: url('http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg') center / cover;
+}
+a {align: left;}
+</style>
 
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <!--<span class="mdl-layout-title">Title</span>-->
-      </header>
-          <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Settings</span>
-            <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="">Link</a>
-            </nav>
-          </div>
-          <main class="mdl-layout__content">
-          <div class="welcomeText">
-            <h2>Goals!</h2>
-            <p>A survey about goals was carried out in the Estonian Business School where they asked students about their current goals and objectives.<br> 83% of participants had no goals set. 16% of students had some goals and only 1% of the students had certain goals and objectives planned out.<br> The same survey was continued 10 years later and the same participants were querired about their monthly wages. The same 86 % mostly earned an average wage.<br> The 16% earned 3 times the average wage.<br> The 1% earned 10 times more than the other groups wages combined.</p>
-            <h3> Just follow these 5 steps </h3> 
-            <!-- Raised button with ripple -->
-            <form action="specific.html">
-<!-- Raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-  Next
-</button>
-            </form>
-          </div>
-          </main>
-        </div>
-    </div>
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text" style="text-align: justify;">
+    A survey about goals was carried out in the Estonian Business School where they asked students about their current goals and objectives.<br> 
+    83% of participants had no goals set. 16% of students had some goals and only 1% of the students had certain goals and objectives planned out.
+    The same survey was carried out again 10 years later and the same participants were queried about their monthly wages. The same 86% mostly earned an average wage. The 16% earned 3 times the average wage.
+    The 1% earned 10 times more than the other groups wages combined.
+  </div>
+  <div class="mdl-card__actions mdl-card--border" >
+   <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="specific.html" style="align: left">
+      Next
+    </a>
+  </div>
+  
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
