@@ -27,22 +27,32 @@
   <body>
 <!-- Wide card with share menu button -->
 <style>
+  td {
+    color: black;
+  }
+  .padding {
+    padding-bottom: 5px;
+  }
+  body {
+    padding: 10px;
+    background: #fafafa;
+    position: relative;
+  }
 .demo-card-wide.mdl-card {
-  width: 512px;
+  width: auto;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
-  height: 176px;
-  background: url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+  height: 75px;
+  background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
 </style>
-
 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title">
-    <h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: auto">CONCLUSION</h1>
+    <h3 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">CONCLUSION</h3>
   </div>
   <div class="mdl-card__supporting-text"style="margin-left:auto;">
      <p style="font-size:20px;color: blue;display:inline;"><b>S  </b><p style="display:inline;font-size:10px;color: black;display:inline;">Taiega tahtis jutt. Kassid 50 palun. blalbalbalbalbalba. Tahaks saada miljonariks</p></p>
@@ -52,10 +62,12 @@
 	<p style="font-size:20px;color: purple;display:inline;"><b>T  </b><p style="font-size:10px;color: black;display:inline;">Vahemalt sama tahtis jutt. Kassid 50 palun. blalbalbalbalbalba. Homseks voiks olemas olla</p></p>
   
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="rome.html" style="align: left">
-      NEXT
-    </a>
+  <form action="rome.html" style="text-align: center; padding-bottom: 10px">
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+          Next
+        </button>
+      </form>
   </div>
 </div>
   
