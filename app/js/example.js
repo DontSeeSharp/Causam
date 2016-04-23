@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngAnimate', 'ui.bootstrap']);
-angular.module('myApp', []).controller('MainCtrl', function ($scope) {
+angular.module('myApp', []).controller('asd', function ($scope) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
