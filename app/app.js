@@ -8,7 +8,7 @@ var app = angular.module('myApp', [
   'myApp.version',
   'ngAnimate',
   'ui.bootstrap'
-])
+]);
 
 
 app.config(['$routeProvider', function($routeProvider) {
