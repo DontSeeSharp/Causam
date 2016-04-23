@@ -1,26 +1,23 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
+    <title>Checklist</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <!-- MDL -->
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-indigo.min.css">
+    <link rel="stylesheet" href="css/checklist.css">
     <!--
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-indigo.min.css" /> 
     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-
+     <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
         <link rel="stylesheet" href="css/style.css">
-
+        <link rel ="stylesheet" href="causam/css/checklist.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,37 +26,20 @@
     <![endif]-->
   </head>
   <body>
-  <style>
-  .mdl-card__supporting-text {
-    color: black;
-    margin-right: auto; 
-    margin-left: auto;
-  }
-.demo-card-wide.mdl-card {
-  color: black;
-  width: auto;
-}
-.demo-card-wide > .mdl-card__title {
-  color: black;
-  height: 176px;
-  background: url('http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg') center / cover;
-}
-a {align: left;}
-</style>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h3 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">TIMEBOUND</h3>
+        
+      </div>
+      <div class="mdl-card__supporting-text">
+        <input type="checkbox" class="read-more-state" id="post-1" />
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: 15%">TIMEBOUND</h1>
-  </div>
-  <div class="mdl-card__supporting-text" style="text-align: justify;">
-    TIME-BOUND - a goal must be timebound.<br>
-    <br>
-    A goal must be given a target date. A commitment to a deadline helps you focus your efforts towards completing your goal. This reminds you to stay on track with your things.<br>
-    <br>
-    Set a deadline for your goal:
-  </div>
-  Click below
-  <input type="text" data-type="date" id="date-input" />
+        <p class="read-more-wrap">TIME-BOUND - a goal must be timebound. <span class="read-more-target">A goal must be given a target date. A commitment to a deadline helps you focus your efforts towards completing your goal. This reminds you to stay on track with your things.</span></p>
+        <label for="post-1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  read-more-trigger"></label>
+      </div>
+      <p class="left-padding">Set a deadline for your goal: </p>
+      Click below!
+      <input type="text" data-type="date" id="date-input" />
 
 <div id="material-header-holder" style="display:none">
   <div class="ui-datepicker-material-header">
@@ -75,14 +55,21 @@ a {align: left;}
     </div>
   </div>
 </div>
-  <div class="mdl-card__actions mdl-card--border" >
-   <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="conclusion.html" style="align: left">
-      Next
-    </a>
-  </div>
-  
-  
-</div>
+      <form action="conclusion.html" style="text-align: center; padding-bottom: 10px">
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+          Next
+        </button>
+      </form>
+      <div class="mdl-card__menu">
+        <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
+          <li class="mdl-menu__item">Logged in as Ragnar luga</li>
+          <li class="mdl-menu__item">Settings</li>
+          <li class="mdl-menu__item">Log out</li>
+        </ul>
+      </div>
+    </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
