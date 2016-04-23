@@ -69,26 +69,49 @@
       background: #fafafa;
       position: relative;
     }
+    .read-more-state {
+      display: none;
+    }
+
+    .read-more-target {
+      opacity: 0;
+      max-height: 0;
+      font-size: 0;
+      transition: .25s ease;
+    }
+
+    .read-more-state:checked ~ .read-more-wrap .read-more-target {
+      opacity: 1;
+      font-size: inherit;
+      max-height: 999em;
+    }
+
+    .read-more-state ~ .read-more-trigger:before {
+      content: 'Show more';
+    }
+
+    .read-more-state:checked ~ .read-more-trigger:before {
+      content: 'Show less';
+    }
+
+    .read-more-trigger {
+      cursor: pointer;
+      display: inline-block;
+      font-size: .7em;
+    }
   </style>
 
 
     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-      <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Title</span>
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
-        </div>
       <div class="mdl-card__title">
-        <h1 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">CHECKLIST</h1>
+        <h3 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">CHECKLIST</h3>
         
       </div>
       <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
+        <input type="checkbox" class="read-more-state" id="post-1" />
+
+        <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
+        <label for="post-1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  read-more-trigger"></label>
       </div>
       <div style="padding-top: 10px;padding-bottom: 10px">
         <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center">
