@@ -53,14 +53,30 @@
     .padding {
       padding-bottom: 5px;
     }
+    .demo-card-wide.mdl-card {
+      width: auto;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 176px;
+      background: url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    </style>
 
+    
+
+    <!-- Wide card with share menu button -->
+    <style>
       .demo-card-wide.mdl-card {
         width: auto;
       }
       .demo-card-wide > .mdl-card__title {
         color: #fff;
         height: 200px;
-        background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ),url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
+        background: linear-gradient(  rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3) ), url('http://api.ning.com/files/kV4MbYiv7oQLhGNt9z99IVup4x8KpJbP0OqJ1qu2n0J959TrmAUgnB4fouCB4R9e6fpzSbld2mWCEj7ELe5AW5pcC0vQOp*t/1082099832.jpeg') center / cover;
       }
       .demo-card-wide > .mdl-card__menu {
         color: #fff;
@@ -69,17 +85,65 @@
 
 
     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Title</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
       <div class="mdl-card__title">
-        <h1 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">WELCOME</h1>
+        <h1 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">CHECKLIST</h1>
+        
       </div>
       <div class="mdl-card__supporting-text">
-        This little app is called CAUSAM (pronounce it like Shazam!).
-            It means "motivation" in Latin. CAUSAM  is designed to bring motivation to your life but besides that,
-            it works as a personal tutor and teaches you necessary life skills that are not taught in school.
-            We hope that this app will help with your road ahead!
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris sagittis pellentesque lacus eleifend lacinia...
+      </div>
+      <div style="padding-top: 10px;padding-bottom: 10px">
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center">
+          <thead>
+            <tr>
+              <th class="mdl-data-table__cell--non-numeric">Goal</th>
+
+              <th>Deadline</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+              <td style="padding-bottom: 10px">
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                  edit
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+              <td style="padding-bottom: 10px">
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                  edit
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+              <td style="padding-bottom: 10px">
+                <!-- Raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                  edit
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="align: center" href="intro.html">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="align: center" href="end1.html">
           NEXT
         </a>
       </div>
