@@ -1,67 +1,88 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <!-- Material Design Lite -->
-    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
-    <!-- Material Design icon font -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Checklist</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- MDL -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-indigo.min.css">
+    <link rel="stylesheet" href="css/checklist.css">
+    <!--
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-indigo.min.css" /> 
+    -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <style>
-	.demo-card-wide.mdl-card {
-	  width: auto;
-	}
-	.demo-card-wide > .mdl-card__title {
-	  color: #fff;
-	  height: 176px;
-	  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
-	}
-	.demo-card-wide > .mdl-card__menu {
-	  color: #fff;
-	}
 
-	body {
-	  padding: auto;
-	  background: #fafafa;
-	  position: relative;
-	}
-	.mdl-button {
-	  width: 35%;
-	}
-	</style>
-    <!-- Wide card with share menu button -->
+
+
     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h1 class="subhead-2" style="color: white; margin-right: auto; margin-left: auto">ACHIEVABLE</h1>
+        <h3 class="SUBHEAD-2" style="color: white; margin-right: auto; margin-left: 10%">ACHIEVABLE</h3>
+        
       </div>
       <div class="mdl-card__supporting-text">
-		<p class="body-1" style="text-align: justify; margin-right: auto; margin-left: auto; max-width: 800px; color: black">
-		 A goal must be achievable. 
-		 This means that your goal is realistic and can be attained. 
-		 If a goal is out of your reach, then it's meaningless. 
-		 An achievable goal gives you the knowing that it can be done and there are no major restraints for it.
-		</p>
-		<h3 class="subhead-3" style="color: black; margin-right: auto; margin-left: 39%">
-		Is your goal achievable?
-		</h3>
-    </div>
-	<div class="mdl-card__actions mdl-card--border">
-       <ul class="mdl-list">
-		<form action="relevant.html">
-	    <li class="mdl-list__item">
-	    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" style="margin-left:auto; margin-right:auto; display:inline">
-		  yes
-		</button>
-		</li>
-		</form>
-		<form action="specific.html">
-		<li class="mdl-list__item">
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" style="margin-left:auto; margin-right:auto; display:inline">
-		  no
-		</button>
-		</li>
-		</form>
-		</ul>
+        <input type="checkbox" class="read-more-state" id="post-1" />
+
+        <p class="read-more-wrap">A goal must be achievable. <span class="read-more-target">This means that your goal is realistic and can be attained. If a goal is out of your reach, then it's meaningless. An achievable goal gives you the knowing that it can be done and there are no major restraints for it.</span></p>
+        <label for="post-1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  read-more-trigger"></label>
       </div>
+      <div style="padding-top: 10px;padding-bottom: 10px">
+        <table align="center">
+          <tbody>
+            <tr>
+              <td id="test">
+			   <form action="relevant.html">
+			    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect menu-buttons">
+				yes
+				</button>
+			   </form>
+              </td>
+            </tr>
+            <tr>
+              <td id="test">
+			   <form action="specific.html">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect menu-buttons">
+				no
+				</button>
+			   </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      
+      <div class="mdl-card__menu">
+        <button id="share-post-1" class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">menu</i></button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-post-1">
+          <li class="mdl-menu__item">Logged in as Ragnar luga</li>
+          <li class="mdl-menu__item">Settings</li>
+          <li class="mdl-menu__item">Log out</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
   </body>
 </html>
