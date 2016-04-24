@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', [
+var server = angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
@@ -11,7 +11,7 @@ var app = angular.module('myApp', [
 ]);
 
 
-app.config(['$routeProvider', function($routeProvider) {
+server.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/greeting', {templateUrl: 'greeting.html'})
   .when('/menu', {templateUrl: 'menu.html'})
@@ -30,7 +30,7 @@ app.config(['$routeProvider', function($routeProvider) {
   console.log('asdasd')
 }]);
 
-app.controller('MainCtrl', function ($scope) {
+server.controller('MainCtrl', function ($scope) {
 	$scope.goTo = function (url) {
 		window.location.href = url
 	}
