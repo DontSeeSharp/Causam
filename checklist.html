@@ -6,7 +6,8 @@
   }
   .text-after-checkbox{
     display: inline;
-	margin-left: 25px;
+	margin-left: auto;
+  margin-right: auto;
   }
   .state-icon {
     left: -5px;
@@ -24,8 +25,7 @@
       <div class="mdl-card__supporting-text">
         <input type="checkbox" class="read-more-state" id="post-1" />
 
-        <p class="read-more-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="read-more-target">Libero fuga facilis vel consectetur quos sapiente deleniti eveniet dolores tempore eos deserunt officia quis ab? Excepturi vero tempore minus beatae voluptatem!</span></p>
-        <label for="post-1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  read-more-trigger"></label>
+        <p class="read-more-wrap">Enter your small goals here. Make sure to set deadlines for them aswell.</p>
 		<div style="padding-top: 10px;padding-bottom: 10px;">
           <table class="tabel mdl-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center">
             <thead>
@@ -38,18 +38,18 @@
             </thead>
             <tbody>
               <tr>
-                <td class="checkbox-style" style="padding-bottom: 10px">
-				<p class="text-after-checkbox">Acrylic (Transparent)</p>
+                <td class="checkbox-style" style="padding-bottom: 10px; text-align: left">
+				<p class="text-after-checkbox">Study for math quiz</p>
 				</td>
 				<td style="padding-bottom: 10px">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="edit1">
                     edit
                   </button>
                   </td>
               </tr>
               <tr>
-                <td class="checkbox-style" style="padding-bottom: 10px">
-				<p class="text-after-checkbox">Acrylic (Transparent)</p>
+                <td class="checkbox-style" style="padding-bottom: 10px; text-align: left">
+				<p class="text-after-checkbox">Read Physics chapter 2.</p>
 				</td>
 				<td style="padding-bottom: 10px">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" style="background-color: red">
@@ -58,8 +58,8 @@
                   </td>
               </tr>
               <tr>
-                <td class="checkbox-style" style="padding-bottom: 10px">
-				<p class="text-after-checkbox">Acrylic (Transparent)</p>
+                <td class="checkbox-style" style="padding-bottom: 10px; text-align: left">
+				<p class="text-after-checkbox">Prepare for LAPHackathon</p>
 				</td>
 				<td style="padding-bottom: 10px">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
@@ -89,7 +89,56 @@
          </ul>
       </div>
     </div>
+            <dialog class="mdl-dialog" style="width: 200; height: auto;">
+          <div>
+            <h3 class="mdl-dialog__title">DEADLINE</h3>
+          </div>
+          <div class="mdl-dialog__content">
+    <div ng-controller="MainCtrl">
+      <div class="col-md-6"  >
+        <p class="input-group">
+          <input type="text" style="width: 100px;" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+
+          </div>
+          <div class="mdl_dialog__actions" align="center">
+            <table>
+            <tr>
+            <td>
+            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect redirect">FINISH</button>
+            </td>
+            <td>
+            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect exit">CANCEL</button>
+            </td>
+            </tr>
+            </table>
+          </div>
+        </dialog>        
 		<script>
+
+          var dialog = document.querySelector('.mdl-dialog');
+          var showDialogButton = document.querySelector('#edit1');
+          if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+          }
+          showDialogButton.addEventListener('click', function() {
+            dialog.showModal();
+          });
+          dialog.querySelector('.exit').addEventListener('click', function() {
+            dialog.close();
+          });
+          dialog.querySelector('.redirect').addEventListener('click', function() {
+            dialog.close();
+            window.location.href = "./#/checklist";
+          });
+    </script>
+
+    <script>
 	$(function () {
     $('.tabel .checkbox-style').each(function () {
         
@@ -170,5 +219,6 @@
 	
 	});
 	</script>
+
     </body>
 </div>
